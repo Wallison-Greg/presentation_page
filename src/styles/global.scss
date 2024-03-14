@@ -1,0 +1,48 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --white: #fff;
+
+    --gray-100: #afafaf;
+    --gray-200: #525252;
+    --gray-700: #15171b;
+    --gray-900: #111113;
+
+    --blue-900: #1fa4e5;
+    --yellow-500: #ffbe16;
+
+}
+body{
+    background: var(--gray-900);
+}
+body, input, textarea, select, button{
+    font: 400 1rem 'Popins', sans-serif;
+}
+button{
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+//basicamente quandoa pagina chegar no tamanho maximo de 1000px ele aplicara o font-size definido nos elementos
+@media (max-width: 1000px){  //font-size padrão e de 16px
+    html{
+        font-size: 93.75%; //vai gerar 15px
+    }
+}
+
+@media (max-width: 720px){  
+    html{
+        font-size: 87.5%; //vai gerar 14px
+    }
+}
+
+/*para facilitar a manutenção do site e a responsividade colocamos detro do arquivo "global" todos os estilos globais que serão aplicados no site definindo as cores, fonte e a 'media query' para definir um fonte size que sera aplicado nos elementos de acordo com o tamanho da pagina
+*/
